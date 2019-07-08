@@ -174,15 +174,14 @@ function minimum(array){
 
 
 function selectionSort(array) {
-    var arrayCopy = array.slice(0); 
-    var newMin, newArray, 
-    len = array.length;
+    let arrayCopy = array.slice(0); 
+    let newMin, newArray
     
-    for(var i = 0; i < array.length; i++){
+    for(let i = 0; i < array.length; i++){
     
         newMin = i;
     
-        for(var  x = i + 1; x < array.length; x++){
+        for(let  x = i + 1; x < array.length; x++){
             if (array[x] < array[newMin]) {
                 newMin = x;
             }

@@ -171,3 +171,25 @@ function minimum(array){
 // Note 2: Selection sort can be implemented using one array. Read the explanation at
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
+
+
+function selectionSort(array) {
+    var arrayCopy = array.slice(0); 
+    var newMin, newArray, 
+    len = array.length;
+    
+    for(var i = 0; i < array.length; i++){
+    
+        newMin = i;
+    
+        for(var  x = i + 1; x < array.length; x++){
+            if (array[x] < array[newMin]) {
+                newMin = x;
+            }
+        }
+        newArray = array[i];
+        array[i] = array[newMin];
+        array[newMin] = newArray;
+    }
+    return array;
+}
